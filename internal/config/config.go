@@ -7,18 +7,18 @@ import (
 
 type (
 	Config struct {
-		Server   Server
-		Postgres Postgres
+		Server   Server   `json:"server"`
+		Postgres Postgres `json:"postgres"`
 	}
 
 	Server struct {
-		Hostname   string
-		TypeServer string
-		Port       string
+		Hostname   string `json:"hostname"`
+		Port       string `json:"port"`
+		TypeServer string `json:"typeserver"`
 	}
 
 	Postgres struct {
-		Url string
+		Url string `json:"url"`
 	}
 )
 

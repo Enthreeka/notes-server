@@ -7,8 +7,9 @@ import (
 )
 
 type Note interface {
-	Create(ctx context.Context, note entity.Note) error
-	Update(ctx context.Context, id string) error
-	Delete(ctx context.Context, id string) error
-	GetByID(ctx context.Context, id int) (*entity.Note, error)
+	Create(ctx context.Context, note entity.Notes) error
+	UpdateNote(ctx context.Context, id int, notes string) error
+	DeleteByID(ctx context.Context, id int) error
+	GetByID(ctx context.Context, id int) (*entity.Notes, error)
+	GetAll(ctx context.Context) ([]entity.Notes, error)
 }

@@ -2,8 +2,8 @@ package entity
 
 import "time"
 
-type Note struct {
-	ID        string    `json:"id"`
-	Data      string    `json:"data"`
+type Notes struct {
+	ID        int       `json:"id"`
+	Notes     string    `json:"notes"`
 	CreatedAt time.Time `json:"created_at"`
 }
